@@ -99,7 +99,7 @@ for traincv, testcv in cv.split(X):
     print(y_pred)
     
     # Save models.
-    lstm_model.save('final_lstm%s.h5' %count)
+    lstm_model.save(os.path.join(current_dir,'models/final_lstm%s.h5' %count))
     
     for i in range(0,248):
         arr[i] = int(np.around(y_pred[i][0]))
